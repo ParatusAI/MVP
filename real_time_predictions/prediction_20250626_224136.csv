@@ -1,0 +1,8 @@
+property,value
+predicted_plqy,0.927
+predicted_emission_peak,518.6
+predicted_fwhm,23.4
+confidence,0.944
+model_version,spectral_cnn_v3
+timestamp,2025-06-26T22:41:36.867522
+source_image,spectrum_002_20250626_224134.png

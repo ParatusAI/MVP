@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-26T21:12:20.689314",
+  "prediction_file": "prediction_20250626_211220.csv",
+  "source_image": "spectrum_002_20250626_211218.png",
+  "predictions": {
+    "predicted_plqy": 0.929,
+    "predicted_emission_peak": 518.6,
+    "predicted_fwhm": 23.4,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T21:12:20.094770",
+    "source_image": "spectrum_002_20250626_211218.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.3499999940395355,
+    "pb_flow_rate": 0.10000000149011612,
+    "temperature": 60.0,
+    "reward": -6265.7431640625,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T21:12:20.688733",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (518.6nm) well-centered at target (520.0nm) \u2022 FWHM (23.4nm) close to target (20.0nm)",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.10000000149011612,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 2,
+      "predicted_outcome": "2D Perovskite",
+      "confidence": 0.8168286221221749,
+      "class_probabilities": {
+        "0": 0.15499111219134656,
+        "1": 0.008265508911368333,
+        "2": 0.4889164708547953,
+        "3": 0.16610630609585833,
+        "4": 0.1817206019466316
+      },
+      "conditions": {
+        "cs_br_concentration": 0.699999988079071,
+        "pb_br2_concentration": 0.18000000268220903,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 3.8888885486631866,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.7954545447664048,
+        "supersaturation": 0.06120387357350734,
+        "nucleation_rate": 0.10138707098061794,
+        "growth_rate": 0.0,
+        "solvent_effect": 0.9603023453614851,
+        "cs_pb_temp_interaction": -1.2962961828877289,
+        "ligand_temp_interaction": -0.2651515149221349,
+        "concentration_product": 0.12599999973177908
+      },
+      "timestamp": "2025-06-26T21:12:20.688945"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.8168286221221749,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T21:12:20.688959",
+    "reasoning": "RL parameters safe but may produce 2D Perovskite (confidence: 81.7%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.7880618093937629,
+    "class_probabilities": {
+      "0": 0.02987436989906109,
+      "1": 0.03108249490594059,
+      "2": 0.47449870015278867,
+      "3": 0.1729856393404016,
+      "4": 0.2915587957018079
+    },
+    "conditions": {
+      "cs_br_concentration": 0.4347515829700192,
+      "pb_br2_concentration": 0.2505846646023564,
+      "temperature": 59.891819301118865,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 1.734948809858027,
+      "temp_normalized": -0.3342348391573428,
+      "ligand_ratio": 1.0213964200282746,
+      "supersaturation": 0.05290566330279863,
+      "nucleation_rate": 0.23716932213010386,
+      "growth_rate": -0.1352258736014207,
+      "solvent_effect": 1.0084466043479656,
+      "cs_pb_temp_interaction": -0.579880336409121,
+      "ligand_temp_interaction": -0.3413862681640361,
+      "concentration_product": 0.10894207960388579
+    },
+    "timestamp": "2025-06-26T21:12:20.689246"
+  },
+  "processing_time_seconds": 0.0023818016052246094
+}

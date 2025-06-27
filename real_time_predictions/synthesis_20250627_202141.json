@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-27T20:21:41.358636",
+  "prediction_file": "prediction_20250627_202141.csv",
+  "source_image": "spectrum_003_20250627_202140.png",
+  "predictions": {
+    "predicted_plqy": 0.938,
+    "predicted_emission_peak": 520.2,
+    "predicted_fwhm": 25.1,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-27T20:21:41.116472",
+    "source_image": "spectrum_003_20250627_202140.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.3499999940395355,
+    "pb_flow_rate": 0.3499999940395355,
+    "temperature": 60.0,
+    "reward": -6276.84912109375,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-27T20:21:41.357839",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (520.2nm) well-centered at target (520.0nm) \u2022 FWHM (25.1nm) broader than target (20.0nm) - emission too wide \u2022 Adjusting Pb flow (increase) for better nucleation control",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.10000000149011612,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 0,
+      "predicted_outcome": "Mixed Phase",
+      "confidence": 0.7716841194662167,
+      "class_probabilities": {
+        "0": 0.4372788187835879,
+        "1": 0.10307113476350181,
+        "2": 0.0383492000640085,
+        "3": 0.04094137219449718,
+        "4": 0.3803594741944046
+      },
+      "conditions": {
+        "cs_br_concentration": 0.699999988079071,
+        "pb_br2_concentration": 0.629999989271164,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 1.1111110934744266,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.5263157944795271,
+        "supersaturation": 0.21421355066720987,
+        "nucleation_rate": 0.10159746376634134,
+        "growth_rate": 0.0,
+        "solvent_effect": 1.0103152640528381,
+        "cs_pb_temp_interaction": -0.37037036449147553,
+        "ligand_temp_interaction": -0.17543859815984236,
+        "concentration_product": 0.44099998497962967
+      },
+      "timestamp": "2025-06-27T20:21:41.358136"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.7716841194662167,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-27T20:21:41.358156",
+    "reasoning": "RL parameters safe but may produce Mixed Phase (confidence: 77.2%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.849990387393114,
+    "class_probabilities": {
+      "0": 0.034541631827141886,
+      "1": 0.0464960586420554,
+      "2": 0.47866101234249986,
+      "3": 0.029616470264128347,
+      "4": 0.41068482692417446
+    },
+    "conditions": {
+      "cs_br_concentration": 0.39809266243297464,
+      "pb_br2_concentration": 0.3352424285422869,
+      "temperature": 62.10574332319547,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 1.1874769321091188,
+      "temp_normalized": -0.31578547230670445,
+      "ligand_ratio": 0.9545431536947715,
+      "supersaturation": 0.06512101890042452,
+      "nucleation_rate": 0.1227377082323726,
+      "growth_rate": 2.632179153994329,
+      "solvent_effect": 1.0064901067710679,
+      "cs_pb_temp_interaction": -0.3749879638593945,
+      "ligand_temp_interaction": -0.3014308606266346,
+      "concentration_product": 0.13345755093889525
+    },
+    "timestamp": "2025-06-27T20:21:41.358534"
+  },
+  "processing_time_seconds": 0.002701997756958008
+}

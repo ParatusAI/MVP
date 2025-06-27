@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-26T20:56:56.660956",
+  "prediction_file": "prediction_20250626_205656.csv",
+  "source_image": "spectrum_003_20250626_205655.png",
+  "predictions": {
+    "predicted_plqy": 0.939,
+    "predicted_emission_peak": 520.2,
+    "predicted_fwhm": 25.1,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T20:56:56.136001",
+    "source_image": "spectrum_003_20250626_205655.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.3499999940395355,
+    "pb_flow_rate": 0.10000000149011612,
+    "temperature": 60.0,
+    "reward": -6276.69091796875,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T20:56:56.660493",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (520.2nm) well-centered at target (520.0nm) \u2022 FWHM (25.1nm) broader than target (20.0nm) - emission too wide \u2022 Adjusting Pb flow (decrease) for better nucleation control",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.3499999940395355,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 2,
+      "predicted_outcome": "2D Perovskite",
+      "confidence": 0.898663280931484,
+      "class_probabilities": {
+        "0": 0.1594611223235752,
+        "1": 0.21784891607971915,
+        "2": 0.5085981345942127,
+        "3": 0.08945333488203527,
+        "4": 0.024638492120457624
+      },
+      "conditions": {
+        "cs_br_concentration": 0.699999988079071,
+        "pb_br2_concentration": 0.18000000268220903,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 3.8888885486631866,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.7954545447664048,
+        "supersaturation": 0.06120387357350734,
+        "nucleation_rate": 0.21128170566926602,
+        "growth_rate": 0.0,
+        "solvent_effect": 0.9991809392156622,
+        "cs_pb_temp_interaction": -1.2962961828877289,
+        "ligand_temp_interaction": -0.2651515149221349,
+        "concentration_product": 0.12599999973177908
+      },
+      "timestamp": "2025-06-26T20:56:56.660657"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.898663280931484,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T20:56:56.660665",
+    "reasoning": "RL parameters safe but may produce 2D Perovskite (confidence: 89.9%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.7775700163214809,
+    "class_probabilities": {
+      "0": 0.06558567209427459,
+      "1": 0.20922986486086653,
+      "2": 0.6544937728638207,
+      "3": 0.052145055007775325,
+      "4": 0.01854563517326294
+    },
+    "conditions": {
+      "cs_br_concentration": 0.3444111789942029,
+      "pb_br2_concentration": 0.34627100306563136,
+      "temperature": 68.34397858819874,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 0.9946289640158937,
+      "temp_normalized": -0.2638001784316772,
+      "ligand_ratio": 1.0134907314062591,
+      "supersaturation": 0.05896087898480875,
+      "nucleation_rate": 0.12509322101156742,
+      "growth_rate": 10.429973235248418,
+      "solvent_effect": 0.9837256394299015,
+      "cs_pb_temp_interaction": -0.262383298180707,
+      "ligand_temp_interaction": -0.2673590357838222,
+      "concentration_product": 0.11925960441733935
+    },
+    "timestamp": "2025-06-26T20:56:56.660916"
+  },
+  "processing_time_seconds": 0.0023589134216308594
+}

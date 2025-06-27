@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-06-24T20:34:05.197882",
+  "prediction_file": "prediction_20250624_203404.csv",
+  "source_image": "spectrum_004_20250624_203404.png",
+  "predictions": {
+    "predicted_plqy": 0.912,
+    "predicted_emission_peak": 518.9,
+    "predicted_fwhm": 24.1,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-24T20:34:04.928119",
+    "source_image": "spectrum_004_20250624_203404.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.10000000149011612,
+    "pb_flow_rate": 0.10000000149011612,
+    "temperature": 60.0,
+    "reward": -6272.93115234375,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-24T20:34:05.197859",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (518.9nm) well-centered at target (520.0nm) \u2022 FWHM (24.1nm) close to target (20.0nm) \u2022 Adjusting Cs flow (decrease) to optimize Cs:Pb stoichiometry \u2022 Adjusting Pb flow (decrease) for better nucleation control",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.3499999940395355,
+      "temperature": 60.0
+    }
+  },
+  "processing_time_seconds": 0.0017251968383789062
+}

@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-26T20:14:00.250883",
+  "prediction_file": "prediction_20250626_201400.csv",
+  "source_image": "spectrum_004_20250626_201400.png",
+  "predictions": {
+    "predicted_plqy": 0.909,
+    "predicted_emission_peak": 518.9,
+    "predicted_fwhm": 24.1,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T20:14:00.249508",
+    "source_image": "spectrum_004_20250626_201400.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.1708596646785736,
+    "pb_flow_rate": 0.10000000149011612,
+    "temperature": 60.0,
+    "reward": -6273.40673828125,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T20:14:00.250719",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (518.9nm) well-centered at target (520.0nm) \u2022 FWHM (24.1nm) close to target (20.0nm) \u2022 Adjusting Cs flow (decrease) to optimize Cs:Pb stoichiometry",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.10000000149011612,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 1,
+      "predicted_outcome": "0D Perovskite",
+      "confidence": 0.8648803495513897,
+      "class_probabilities": {
+        "0": 0.009931212476591518,
+        "1": 0.575279743356427,
+        "2": 0.0128847327635029,
+        "3": 0.12014300337971726,
+        "4": 0.28176130802376137
+      },
+      "conditions": {
+        "cs_br_concentration": 0.3417193293571472,
+        "pb_br2_concentration": 0.18000000268220903,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 1.898440584892927,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 1.3417175550052636,
+        "supersaturation": 0.02987792426824452,
+        "nucleation_rate": 0.17557882660933044,
+        "growth_rate": 0.0,
+        "solvent_effect": 1.0075863857927168,
+        "cs_pb_temp_interaction": -0.6328135282976424,
+        "ligand_temp_interaction": -0.4472391850017545,
+        "concentration_product": 0.06150948020084917
+      },
+      "timestamp": "2025-06-26T20:14:00.250781"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.8648803495513897,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T20:14:00.250785",
+    "reasoning": "RL parameters safe but may produce 0D Perovskite (confidence: 86.5%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.7872414578219328,
+    "class_probabilities": {
+      "0": 0.3589816316448766,
+      "1": 0.10460574730871493,
+      "2": 0.45444096753452295,
+      "3": 0.022027523831219444,
+      "4": 0.05994412968066584
+    },
+    "conditions": {
+      "cs_br_concentration": 0.5122230898273544,
+      "pb_br2_concentration": 0.2894759877330986,
+      "temperature": 99.61136283051822,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 1.7694838046629071,
+      "temp_normalized": -0.0032386430790148544,
+      "ligand_ratio": 0.8731455615473874,
+      "supersaturation": 0.07776850897722166,
+      "nucleation_rate": 0.3958149417874327,
+      "growth_rate": 49.51420353814777,
+      "solvent_effect": 1.003357708591232,
+      "cs_pb_temp_interaction": -0.005730726477400396,
+      "ligand_temp_interaction": -0.002827806829877985,
+      "concentration_product": 0.14827628486747313
+    },
+    "timestamp": "2025-06-26T20:14:00.250862"
+  },
+  "processing_time_seconds": 0.0004971027374267578
+}

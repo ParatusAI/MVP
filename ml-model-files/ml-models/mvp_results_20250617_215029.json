@@ -1,0 +1,87 @@
+{
+  "demo_timestamp": "2025-06-17T21:50:29.857401",
+  "total_predictions": 6,
+  "predictions": [
+    {
+      "timestamp": 2.005727,
+      "image": "spectrum_001_20250617_214759.png",
+      "prediction": {
+        "predicted_plqy": 0.832,
+        "predicted_emission_peak": 513.2,
+        "predicted_fwhm": 29.7,
+        "confidence": 0.944,
+        "timestamp": "2025-06-17T13:48:01.507729Z",
+        "model_version": "spectral_cnn_v3",
+        "status": "success (mock)"
+      }
+    },
+    {
+      "timestamp": 30.097362,
+      "image": "spectrum_002_20250617_214829.png",
+      "prediction": {
+        "predicted_plqy": 0.778,
+        "predicted_emission_peak": 517.7,
+        "predicted_fwhm": 29.0,
+        "confidence": 0.944,
+        "timestamp": "2025-06-17T13:48:29.580277Z",
+        "model_version": "spectral_cnn_v3",
+        "status": "success (mock)"
+      }
+    },
+    {
+      "timestamp": 60.164506,
+      "image": "spectrum_003_20250617_214859.png",
+      "prediction": {
+        "predicted_plqy": 0.708,
+        "predicted_emission_peak": 511.5,
+        "predicted_fwhm": 25.5,
+        "confidence": 0.944,
+        "timestamp": "2025-06-17T13:48:59.647758Z",
+        "model_version": "spectral_cnn_v3",
+        "status": "success (mock)"
+      }
+    },
+    {
+      "timestamp": 90.231299,
+      "image": "spectrum_004_20250617_214929.png",
+      "prediction": {
+        "predicted_plqy": 0.772,
+        "predicted_emission_peak": 519.8,
+        "predicted_fwhm": 26.8,
+        "confidence": 0.944,
+        "timestamp": "2025-06-17T13:49:29.715000Z",
+        "model_version": "spectral_cnn_v3",
+        "status": "success (mock)"
+      }
+    },
+    {
+      "timestamp": 120.2994,
+      "image": "spectrum_005_20250617_214959.png",
+      "prediction": {
+        "predicted_plqy": 0.661,
+        "predicted_emission_peak": 512.4,
+        "predicted_fwhm": 22.5,
+        "confidence": 0.944,
+        "timestamp": "2025-06-17T13:49:59.783155Z",
+        "model_version": "spectral_cnn_v3",
+        "status": "success (mock)"
+      }
+    },
+    {
+      "timestamp": 150.37145,
+      "image": "spectrum_006_20250617_215029.png",
+      "prediction": {
+        "predicted_plqy": 0.893,
+        "predicted_emission_peak": 516.5,
+        "predicted_fwhm": 21.7,
+        "confidence": 0.944,
+        "timestamp": "2025-06-17T13:50:29.855305Z",
+        "model_version": "spectral_cnn_v3",
+        "status": "success (mock)"
+      }
+    }
+  ],
+  "final_plqy": 0.893,
+  "final_emission_peak": 516.5,
+  "success": true
+}

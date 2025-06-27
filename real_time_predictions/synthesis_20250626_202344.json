@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-26T20:23:44.983797",
+  "prediction_file": "prediction_20250626_202344.csv",
+  "source_image": "spectrum_004_20250626_202343.png",
+  "predictions": {
+    "predicted_plqy": 0.907,
+    "predicted_emission_peak": 519.0,
+    "predicted_fwhm": 24.2,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T20:23:44.046118",
+    "source_image": "spectrum_004_20250626_202343.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.3499999940395355,
+    "pb_flow_rate": 0.10000000149011612,
+    "temperature": 60.0,
+    "reward": -6274.34326171875,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T20:23:44.983016",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (519.0nm) well-centered at target (520.0nm) \u2022 FWHM (24.2nm) close to target (20.0nm) \u2022 Adjusting Cs flow (increase) to optimize Cs:Pb stoichiometry",
+    "previous_params": {
+      "cs_flow_rate": 0.10000000149011612,
+      "pb_flow_rate": 0.10000000149011612,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 1,
+      "predicted_outcome": "0D Perovskite",
+      "confidence": 0.8242688606890205,
+      "class_probabilities": {
+        "0": 0.1228650934088103,
+        "1": 0.5077678680950567,
+        "2": 0.060449696468731634,
+        "3": 0.04460731092580749,
+        "4": 0.26431003110159396
+      },
+      "conditions": {
+        "cs_br_concentration": 0.699999988079071,
+        "pb_br2_concentration": 0.18000000268220903,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 3.8888885486631866,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.7954545447664048,
+        "supersaturation": 0.06120387357350734,
+        "nucleation_rate": 0.27445544191036564,
+        "growth_rate": 0.0,
+        "solvent_effect": 1.026798391404593,
+        "cs_pb_temp_interaction": -1.2962961828877289,
+        "ligand_temp_interaction": -0.2651515149221349,
+        "concentration_product": 0.12599999973177908
+      },
+      "timestamp": "2025-06-26T20:23:44.983293"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.8242688606890205,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T20:23:44.983313",
+    "reasoning": "RL parameters safe but may produce 0D Perovskite (confidence: 82.4%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.8675256102116512,
+    "class_probabilities": {
+      "0": 0.09203582200372395,
+      "1": 0.008000288356089385,
+      "2": 0.5230033779786619,
+      "3": 0.23069958258374318,
+      "4": 0.1462609290777815
+    },
+    "conditions": {
+      "cs_br_concentration": 0.4610605857027538,
+      "pb_br2_concentration": 0.24245164193492585,
+      "temperature": 91.92546953123048,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 1.901659906307847,
+      "temp_normalized": -0.0672877539064127,
+      "ligand_ratio": 0.9950075671043427,
+      "supersaturation": 0.0578381980748425,
+      "nucleation_rate": 0.18850866314251624,
+      "growth_rate": 39.906836914038095,
+      "solvent_effect": 1.0024085598153676,
+      "cs_pb_temp_interaction": -0.12795842378933425,
+      "ligand_temp_interaction": -0.06695182431033543,
+      "concentration_product": 0.11178489603511127
+    },
+    "timestamp": "2025-06-26T20:23:44.983701"
+  },
+  "processing_time_seconds": 0.002824068069458008
+}

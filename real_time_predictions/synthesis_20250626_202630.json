@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-26T20:26:30.728105",
+  "prediction_file": "prediction_20250626_202630.csv",
+  "source_image": "spectrum_004_20250626_202629.png",
+  "predictions": {
+    "predicted_plqy": 0.909,
+    "predicted_emission_peak": 518.9,
+    "predicted_fwhm": 24.1,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T20:26:30.589643",
+    "source_image": "spectrum_004_20250626_202629.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.3499999940395355,
+    "pb_flow_rate": 0.3499999940395355,
+    "temperature": 60.0,
+    "reward": -6273.40673828125,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T20:26:30.727322",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (518.9nm) well-centered at target (520.0nm) \u2022 FWHM (24.1nm) close to target (20.0nm) \u2022 Adjusting Pb flow (increase) for better nucleation control",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.10000000149011612,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 0,
+      "predicted_outcome": "Mixed Phase",
+      "confidence": 0.8172474309708498,
+      "class_probabilities": {
+        "0": 0.510249284957938,
+        "1": 0.09629682409738399,
+        "2": 0.12827472732445652,
+        "3": 0.1847195455127705,
+        "4": 0.08045961810745106
+      },
+      "conditions": {
+        "cs_br_concentration": 0.699999988079071,
+        "pb_br2_concentration": 0.629999989271164,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 1.1111110934744266,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.5263157944795271,
+        "supersaturation": 0.21421355066720987,
+        "nucleation_rate": 0.17703705672581532,
+        "growth_rate": 0.0,
+        "solvent_effect": 1.001954504142421,
+        "cs_pb_temp_interaction": -0.37037036449147553,
+        "ligand_temp_interaction": -0.17543859815984236,
+        "concentration_product": 0.44099998497962967
+      },
+      "timestamp": "2025-06-26T20:26:30.727608"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.8172474309708498,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T20:26:30.727629",
+    "reasoning": "RL parameters safe but may produce Mixed Phase (confidence: 81.7%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.7983397850233475,
+    "class_probabilities": {
+      "0": 0.153468679336487,
+      "1": 0.24554587278781734,
+      "2": 0.5623968961562013,
+      "3": 0.03192007826264349,
+      "4": 0.00666847345685102
+    },
+    "conditions": {
+      "cs_br_concentration": 0.47358224416252603,
+      "pb_br2_concentration": 0.2975298029666303,
+      "temperature": 83.4940285244581,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 1.5917135813735783,
+      "temp_normalized": -0.1375497622961825,
+      "ligand_ratio": 0.9077798661404595,
+      "supersaturation": 0.07177813842429233,
+      "nucleation_rate": 0.11428697274650435,
+      "growth_rate": 29.367535655572627,
+      "solvent_effect": 0.9931910914405637,
+      "cs_pb_temp_interaction": -0.21893982476154103,
+      "ligand_temp_interaction": -0.12486490480488056,
+      "concentration_product": 0.14090483179417096
+    },
+    "timestamp": "2025-06-26T20:26:30.728015"
+  },
+  "processing_time_seconds": 0.0025548934936523438
+}

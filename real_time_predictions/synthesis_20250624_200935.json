@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-06-24T20:09:35.197846",
+  "prediction_file": "prediction_20250624_200934.csv",
+  "source_image": "spectrum_004_20250624_200933.png",
+  "predictions": {
+    "predicted_plqy": 0.909,
+    "predicted_emission_peak": 518.9,
+    "predicted_fwhm": 24.1,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-24T20:09:34.886048",
+    "source_image": "spectrum_004_20250624_200933.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.10000000149011612,
+    "pb_flow_rate": 0.10000000149011612,
+    "temperature": 60.0,
+    "reward": -6273.40673828125,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-24T20:09:35.197828"
+  },
+  "processing_time_seconds": 0.0017521381378173828
+}

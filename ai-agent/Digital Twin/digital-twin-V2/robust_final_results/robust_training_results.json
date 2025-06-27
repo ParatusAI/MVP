@@ -1,0 +1,133 @@
+{
+  "dataset_info": {
+    "total_samples": 150000,
+    "train_samples": 90000,
+    "val_samples": 30000,
+    "test_samples": 30000,
+    "num_features": 17,
+    "num_classes": 5,
+    "class_distribution": {
+      "1": 30000,
+      "0": 30000,
+      "4": 30000,
+      "3": 30000,
+      "2": 30000
+    }
+  },
+  "model_results": {
+    "Random Forest": {
+      "val_accuracy": 0.9186333333333333,
+      "val_f1": 0.9184137163255746,
+      "cv_mean": 0.9181444444444444,
+      "cv_std": 0.0007947357663221204,
+      "avg_confidence": 0.902090273494863,
+      "high_conf_accuracy": 0.9681869826326895,
+      "train_time": 40.785022258758545
+    },
+    "Gradient Boosting": {
+      "val_accuracy": 0.9174,
+      "val_f1": 0.9172527407985525,
+      "cv_mean": 0.9166777777777778,
+      "cv_std": 0.0009996295610171025,
+      "avg_confidence": 0.9494354244219779,
+      "high_conf_accuracy": 0.9489360148921415,
+      "train_time": 1674.9650766849518
+    },
+    "Extra Trees": {
+      "val_accuracy": 0.9152,
+      "val_f1": 0.9148393535679473,
+      "cv_mean": 0.9154666666666668,
+      "cv_std": 0.0007540835333758627,
+      "avg_confidence": 0.8594066063249535,
+      "high_conf_accuracy": 0.9807189092411513,
+      "train_time": 4.71687650680542
+    },
+    "Neural Network": {
+      "val_accuracy": 0.9151,
+      "val_f1": 0.9145063824922373,
+      "cv_mean": 0.9161444444444445,
+      "cv_std": 0.002275093269014731,
+      "avg_confidence": 0.9238262750602461,
+      "high_conf_accuracy": 0.9608222678177384,
+      "train_time": 53.73260712623596
+    }
+  },
+  "calibration_results": {
+    "calibrated_accuracy": 0.9173,
+    "avg_confidence": 0.9186716836714978,
+    "calibration_error": 0.0013716836714977587
+  },
+  "evaluation_results": {
+    "test_accuracy": 0.9153,
+    "test_f1_score": 0.9152807206466377,
+    "avg_confidence": 0.9184991895761687,
+    "high_confidence_accuracy": 0.9496894409937888,
+    "per_class_f1": [
+      0.9351820915469429,
+      0.8410059319909766,
+      0.9583229762200679,
+      0.9047343633809799,
+      0.9371582400942206
+    ],
+    "confusion_matrix": [
+      [
+        5598,
+        248,
+        0,
+        112,
+        42
+      ],
+      [
+        227,
+        5033,
+        101,
+        502,
+        137
+      ],
+      [
+        0,
+        84,
+        5783,
+        1,
+        132
+      ],
+      [
+        80,
+        439,
+        0,
+        5475,
+        6
+      ],
+      [
+        67,
+        165,
+        185,
+        13,
+        5570
+      ]
+    ],
+    "target_90_achieved": true,
+    "target_95_achieved": false
+  },
+  "feature_columns": [
+    "cs_br_concentration",
+    "pb_br2_concentration",
+    "temperature",
+    "oa_concentration",
+    "oam_concentration",
+    "reaction_time",
+    "solvent_type",
+    "cs_pb_ratio",
+    "temp_normalized",
+    "ligand_ratio",
+    "supersaturation",
+    "nucleation_rate",
+    "growth_rate",
+    "solvent_effect",
+    "cs_pb_temp_interaction",
+    "ligand_temp_interaction",
+    "concentration_product"
+  ],
+  "stratified_cv_used": true,
+  "cv_folds": 5
+}

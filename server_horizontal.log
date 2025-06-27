@@ -1,0 +1,982 @@
+/Users/babacaveman/Desktop/ai_spectral_agent/integrated_mvp_app.py:1207: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+/Users/babacaveman/Desktop/ai_spectral_agent/integrated_mvp_app.py:1217: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("shutdown")
+2025-06-26 21:00:23,055 - __main__ - INFO - 🔍 Checking system requirements...
+2025-06-26 21:00:23,055 - __main__ - INFO - 🌐 Starting web interface on http://localhost:8000
+2025-06-26 21:00:23,055 - __main__ - INFO - 📊 Monitor at: http://localhost:8000
+2025-06-26 21:00:23,055 - __main__ - INFO - 🚀 Demo API: POST http://localhost:8000/api/demo/start
+INFO:     Started server process [68430]
+INFO:     Waiting for application startup.
+2025-06-26 21:00:23,065 - __main__ - INFO - 🔧 Integration system initialized
+2025-06-26 21:00:23,065 - __main__ - INFO - 📁 Predictions: real_time_predictions
+2025-06-26 21:00:23,065 - __main__ - INFO - 📁 Spectral: spectral_images_realtime
+2025-06-26 21:00:23,065 - __main__ - INFO - 🔧 Initializing AI components...
+2025-06-26 21:00:23,129 - __main__ - INFO - ✅ CNN model loaded: ml-model-files/ml-models/cspbbr3_final_model.pth
+/Users/babacaveman/Desktop/ai_spectral_agent/mvp_venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:305: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+/Users/babacaveman/Desktop/ai_spectral_agent/mvp_venv/lib/python3.13/site-packages/stable_baselines3/common/env_checker.py:462: UserWarning: We recommend you to use a symmetric and normalized Box action space (range=[-1, 1]) cf. https://stable-baselines3.readthedocs.io/en/master/guide/rl_tips.html
+  warnings.warn(
+2025-06-26 21:00:23,133 - __main__ - INFO - ✅ RL model loaded: models/ppo_integrated_mvp.zip
+2025-06-26 21:00:23,133 - __main__ - INFO - 🎯 RL targets set: PLQY=80.0%, λ=520.0nm, FWHM=20.0nm
+2025-06-26 21:00:23,133 - __main__ - INFO - 🔧 Digital Twin Simulator initialized
+2025-06-26 21:00:23,133 - __main__ - INFO - ✅ AI components initialized (CNN + RL + Digital Twin)
+2025-06-26 21:00:23,133 - __main__ - INFO - 👀 Monitoring spectral images...
+2025-06-26 21:00:23,133 - __main__ - INFO - 👀 Monitoring prediction files...
+2025-06-26 21:00:23,133 - __main__ - INFO - 🔍 File monitoring started
+2025-06-26 21:00:23,133 - __main__ - INFO - ⏱️ CNN predictions: Every 30s
+2025-06-26 21:00:23,133 - __main__ - INFO - ⏱️ RL responses: Within 10s
+2025-06-26 21:00:23,133 - __main__ - INFO - 🚀 MVP system started
+INFO:     Application startup complete.
+2025-06-26 21:00:23,134 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250624_200803.png
+2025-06-26 21:00:23,134 - __main__ - INFO - 📥 RL Processing: prediction_20250624_200804.csv
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-06-26 21:00:23,137 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,137 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 76.7%)
+2025-06-26 21:00:23,137 - __main__ - INFO - 🔧 Digital Twin updated: 3D Perovskite (confidence: 90.6%)
+2025-06-26 21:00:23,137 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,137 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,137 - __main__ - INFO -    Pb Flow: 0.128 mL/min
+2025-06-26 21:00:23,137 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,137 - __main__ - INFO -    Reward: -6270.56
+2025-06-26 21:00:23,137 - __main__ - INFO - 📥 RL Processing: prediction_20250624_200834.csv
+2025-06-26 21:00:23,138 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,138 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 77.6%)
+2025-06-26 21:00:23,138 - __main__ - INFO - 🔧 Digital Twin updated: 3D Perovskite (confidence: 86.2%)
+2025-06-26 21:00:23,138 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,138 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,138 - __main__ - INFO -    Pb Flow: 0.129 mL/min
+2025-06-26 21:00:23,138 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,138 - __main__ - INFO -    Reward: -6266.22
+2025-06-26 21:00:23,138 - __main__ - INFO - 📥 RL Processing: prediction_20250624_200904.csv
+🧪 CsPbBr3 Synthesis MVP - Integrated AI System
+============================================================
+🤖 Isaiah's CNN (94.4% R²) + Ryan's RL (PPO) + File Integration
+📊 Web monitoring interface included
+⏱️  Performance: CNN=30s, RL=10s
+============================================================
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:00:23,139 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,139 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 82.5%)
+2025-06-26 21:00:23,139 - __main__ - WARNING - 🔧 Digital Twin: Cs pump showing warning status
+2025-06-26 21:00:23,139 - __main__ - INFO - 🔧 Digital Twin updated: 3D Perovskite (confidence: 87.8%)
+2025-06-26 21:00:23,139 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,139 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,139 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,139 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,139 - __main__ - INFO -    Reward: -6276.85
+2025-06-26 21:00:23,139 - __main__ - INFO - 📥 RL Processing: prediction_20250624_200934.csv
+2025-06-26 21:00:23,140 - __main__ - INFO - 🔧 Digital Twin Validation: REJECT
+2025-06-26 21:00:23,140 - __main__ - INFO -    Reasoning: RL parameters rejected: Safety violations in predicted_not_failed
+2025-06-26 21:00:23,140 - __main__ - WARNING - ⚠️ RL action blocked by Digital Twin safety validation
+2025-06-26 21:00:23,140 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,140 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,140 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,140 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,140 - __main__ - INFO -    Reward: -6273.41
+2025-06-26 21:00:23,140 - __main__ - INFO - 📥 RL Processing: prediction_20250624_201004.csv
+2025-06-26 21:00:23,140 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,140 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 86.3%)
+2025-06-26 21:00:23,140 - __main__ - INFO - 🔧 Digital Twin updated: 3D Perovskite (confidence: 88.2%)
+2025-06-26 21:00:23,141 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,141 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,141 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,141 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,141 - __main__ - INFO -    Reward: -6283.52
+2025-06-26 21:00:23,141 - __main__ - INFO - 📥 RL Processing: prediction_20250624_201035.csv
+2025-06-26 21:00:23,141 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,141 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 82.0%)
+2025-06-26 21:00:23,141 - __main__ - INFO - 🔧 Digital Twin updated: 3D Perovskite (confidence: 76.2%)
+2025-06-26 21:00:23,141 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,142 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,142 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,142 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,142 - __main__ - INFO -    Reward: -6272.31
+2025-06-26 21:00:23,142 - __main__ - INFO - 📥 RL Processing: prediction_20250624_203016.csv
+2025-06-26 21:00:23,142 - __main__ - INFO - 🔧 Digital Twin Validation: REJECT
+2025-06-26 21:00:23,142 - __main__ - INFO -    Reasoning: RL parameters rejected: Safety violations in predicted_not_failed
+2025-06-26 21:00:23,142 - __main__ - WARNING - ⚠️ RL action blocked by Digital Twin safety validation
+2025-06-26 21:00:23,142 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,142 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,142 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,142 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,142 - __main__ - INFO -    Reward: -6272.31
+2025-06-26 21:00:23,142 - __main__ - INFO - 📥 RL Processing: prediction_20250624_203236.csv
+2025-06-26 21:00:23,142 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,142 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 79.8%)
+2025-06-26 21:00:23,142 - __main__ - INFO - 🔧 Digital Twin updated: Mixed Phase (confidence: 87.4%)
+2025-06-26 21:00:23,142 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,142 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,142 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,142 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,142 - __main__ - INFO -    Reward: -6270.40
+2025-06-26 21:00:23,143 - __main__ - INFO - 📥 RL Processing: prediction_20250624_203304.csv
+2025-06-26 21:00:23,143 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,143 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 76.1%)
+2025-06-26 21:00:23,143 - __main__ - INFO - 🔧 Digital Twin updated: Mixed Phase (confidence: 71.4%)
+2025-06-26 21:00:23,143 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,143 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,143 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,143 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,143 - __main__ - INFO -    Reward: -6265.68
+2025-06-26 21:00:23,143 - __main__ - INFO - 📥 RL Processing: prediction_20250624_203334.csv
+2025-06-26 21:00:23,144 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,144 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 79.4%)
+2025-06-26 21:00:23,144 - __main__ - WARNING - 🔧 Digital Twin: Cs pump showing warning status
+2025-06-26 21:00:23,144 - __main__ - INFO - 🔧 Digital Twin updated: Mixed Phase (confidence: 83.0%)
+2025-06-26 21:00:23,144 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,144 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,144 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,144 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,144 - __main__ - INFO -    Reward: -6277.01
+2025-06-26 21:00:23,144 - __main__ - INFO - 📥 RL Processing: prediction_20250624_203404.csv
+2025-06-26 21:00:23,144 - __main__ - INFO - 🔧 Digital Twin Validation: REJECT
+2025-06-26 21:00:23,144 - __main__ - INFO -    Reasoning: RL parameters rejected: Safety violations in predicted_not_failed
+2025-06-26 21:00:23,144 - __main__ - WARNING - ⚠️ RL action blocked by Digital Twin safety validation
+2025-06-26 21:00:23,144 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,144 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,144 - __main__ - INFO -    Pb Flow: 0.273 mL/min
+2025-06-26 21:00:23,145 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,145 - __main__ - INFO -    Reward: -6272.93
+2025-06-26 21:00:23,145 - __main__ - INFO - 📥 RL Processing: prediction_20250624_203435.csv
+2025-06-26 21:00:23,145 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,145 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 85.0%)
+2025-06-26 21:00:23,145 - __main__ - INFO - 🔧 Digital Twin updated: Failed Synthesis (confidence: 65.2%)
+2025-06-26 21:00:23,145 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,145 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,145 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,145 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,145 - __main__ - INFO -    Reward: -6282.32
+2025-06-26 21:00:23,145 - __main__ - INFO - 📥 RL Processing: prediction_20250624_203505.csv
+2025-06-26 21:00:23,145 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,145 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 80.5%)
+2025-06-26 21:00:23,145 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 88.9%)
+2025-06-26 21:00:23,145 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,145 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,145 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,145 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,145 - __main__ - INFO -    Reward: -6271.83
+2025-06-26 21:00:23,146 - __main__ - INFO - 📥 RL Processing: prediction_20250626_200751.csv
+2025-06-26 21:00:23,146 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,146 - __main__ - INFO -    Reasoning: RL parameters safe but may produce Mixed Phase (confidence: 74.9%)
+2025-06-26 21:00:23,146 - __main__ - WARNING - 🔧 Digital Twin: Cs pump showing warning status
+2025-06-26 21:00:23,146 - __main__ - INFO - 🔧 Digital Twin updated: Failed Synthesis (confidence: 83.5%)
+2025-06-26 21:00:23,146 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,146 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,146 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,146 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,146 - __main__ - INFO -    Reward: -6271.83
+2025-06-26 21:00:23,146 - __main__ - INFO - 📥 RL Processing: prediction_20250626_201145.csv
+2025-06-26 21:00:23,146 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,146 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 86.6%)
+2025-06-26 21:00:23,146 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 88.3%)
+2025-06-26 21:00:23,146 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,146 - __main__ - INFO -    Cs Flow: 0.335 mL/min
+2025-06-26 21:00:23,146 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,146 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,146 - __main__ - INFO -    Reward: -6271.83
+2025-06-26 21:00:23,147 - __main__ - INFO - 📥 RL Processing: prediction_20250626_201231.csv
+2025-06-26 21:00:23,147 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,147 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 89.1%)
+2025-06-26 21:00:23,147 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 82.3%)
+2025-06-26 21:00:23,147 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,147 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,147 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,147 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,147 - __main__ - INFO -    Reward: -6271.27
+2025-06-26 21:00:23,148 - __main__ - INFO - 📥 RL Processing: prediction_20250626_201302.csv
+2025-06-26 21:00:23,149 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,149 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 82.2%)
+2025-06-26 21:00:23,149 - __main__ - WARNING - 🔧 Digital Twin: Cs pump showing warning status
+2025-06-26 21:00:23,149 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 83.6%)
+2025-06-26 21:00:23,149 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,149 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,149 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,149 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,149 - __main__ - INFO -    Reward: -6266.06
+2025-06-26 21:00:23,149 - __main__ - INFO - 📥 RL Processing: prediction_20250626_201330.csv
+2025-06-26 21:00:23,150 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,150 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 77.7%)
+2025-06-26 21:00:23,150 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 81.8%)
+2025-06-26 21:00:23,150 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,150 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,150 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,150 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,150 - __main__ - INFO -    Reward: -6276.69
+2025-06-26 21:00:23,150 - __main__ - INFO - 📥 RL Processing: prediction_20250626_201400.csv
+2025-06-26 21:00:23,150 - __main__ - INFO - 🔧 Digital Twin Validation: REJECT
+2025-06-26 21:00:23,150 - __main__ - INFO -    Reasoning: RL parameters rejected: Safety violations in predicted_not_failed
+2025-06-26 21:00:23,150 - __main__ - WARNING - ⚠️ RL action blocked by Digital Twin safety validation
+2025-06-26 21:00:23,150 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,150 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,150 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,150 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,150 - __main__ - INFO -    Reward: -6273.41
+2025-06-26 21:00:23,150 - __main__ - INFO - 📥 RL Processing: prediction_20250626_201430.csv
+2025-06-26 21:00:23,150 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,150 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 88.1%)
+2025-06-26 21:00:23,150 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 84.2%)
+2025-06-26 21:00:23,150 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,150 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,151 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,151 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,151 - __main__ - INFO -    Reward: -6283.67
+2025-06-26 21:00:23,151 - __main__ - INFO - 📥 RL Processing: prediction_20250626_201500.csv
+2025-06-26 21:00:23,151 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,151 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 84.4%)
+2025-06-26 21:00:23,151 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 79.4%)
+2025-06-26 21:00:23,151 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,151 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,151 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,151 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,151 - __main__ - INFO -    Reward: -6270.96
+2025-06-26 21:00:23,151 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202131.csv
+2025-06-26 21:00:23,151 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,151 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 82.7%)
+2025-06-26 21:00:23,151 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 80.4%)
+2025-06-26 21:00:23,151 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,151 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,151 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,151 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,151 - __main__ - INFO -    Reward: -6270.96
+2025-06-26 21:00:23,151 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202215.csv
+2025-06-26 21:00:23,152 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,152 - __main__ - INFO -    Reasoning: RL parameters safe but may produce Mixed Phase (confidence: 82.1%)
+2025-06-26 21:00:23,152 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 89.0%)
+2025-06-26 21:00:23,152 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,152 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,152 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,152 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,152 - __main__ - INFO -    Reward: -6270.49
+2025-06-26 21:00:23,152 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202245.csv
+2025-06-26 21:00:23,152 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,152 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 86.3%)
+2025-06-26 21:00:23,152 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 86.3%)
+2025-06-26 21:00:23,152 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,152 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,152 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,152 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,152 - __main__ - INFO -    Reward: -6266.06
+2025-06-26 21:00:23,152 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202315.csv
+2025-06-26 21:00:23,152 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,152 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 85.7%)
+2025-06-26 21:00:23,152 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 84.7%)
+2025-06-26 21:00:23,152 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,152 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,152 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,152 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,152 - __main__ - INFO -    Reward: -6276.69
+2025-06-26 21:00:23,153 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202344.csv
+2025-06-26 21:00:23,153 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,153 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 83.0%)
+2025-06-26 21:00:23,153 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 80.2%)
+2025-06-26 21:00:23,153 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,153 - __main__ - INFO -    Cs Flow: 0.264 mL/min
+2025-06-26 21:00:23,153 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,153 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,153 - __main__ - INFO -    Reward: -6274.34
+2025-06-26 21:00:23,153 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202414.csv
+2025-06-26 21:00:23,153 - __main__ - INFO - 🔧 Digital Twin Validation: REJECT
+2025-06-26 21:00:23,153 - __main__ - INFO -    Reasoning: RL parameters rejected: Safety violations in predicted_not_failed
+2025-06-26 21:00:23,153 - __main__ - WARNING - ⚠️ RL action blocked by Digital Twin safety validation
+2025-06-26 21:00:23,153 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,153 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,153 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,153 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,153 - __main__ - INFO -    Reward: -6282.48
+2025-06-26 21:00:23,153 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202444.csv
+2025-06-26 21:00:23,153 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,153 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 78.5%)
+2025-06-26 21:00:23,154 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 82.1%)
+2025-06-26 21:00:23,154 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,154 - __main__ - INFO -    Cs Flow: 0.247 mL/min
+2025-06-26 21:00:23,154 - __main__ - INFO -    Pb Flow: 0.196 mL/min
+2025-06-26 21:00:23,154 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,154 - __main__ - INFO -    Reward: -6270.96
+2025-06-26 21:00:23,154 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202500.csv
+2025-06-26 21:00:23,154 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,154 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 81.6%)
+2025-06-26 21:00:23,154 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 78.6%)
+2025-06-26 21:00:23,154 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,154 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,154 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,154 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,154 - __main__ - INFO -    Reward: -6270.33
+2025-06-26 21:00:23,154 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202530.csv
+2025-06-26 21:00:23,155 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,155 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 81.1%)
+2025-06-26 21:00:23,155 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 81.9%)
+2025-06-26 21:00:23,155 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,155 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,155 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,155 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,155 - __main__ - INFO -    Reward: -6265.23
+2025-06-26 21:00:23,155 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202600.csv
+2025-06-26 21:00:23,155 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,155 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 78.5%)
+2025-06-26 21:00:23,155 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 81.1%)
+2025-06-26 21:00:23,155 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,155 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,155 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,155 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,155 - __main__ - INFO -    Reward: -6275.68
+2025-06-26 21:00:23,155 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202630.csv
+2025-06-26 21:00:23,155 - __main__ - INFO - 🔧 Digital Twin Validation: REJECT
+2025-06-26 21:00:23,155 - __main__ - INFO -    Reasoning: RL parameters rejected: Safety violations in predicted_not_failed
+2025-06-26 21:00:23,155 - __main__ - WARNING - ⚠️ RL action blocked by Digital Twin safety validation
+2025-06-26 21:00:23,155 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,155 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,155 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,155 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,156 - __main__ - INFO -    Reward: -6273.41
+2025-06-26 21:00:23,156 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202700.csv
+2025-06-26 21:00:23,156 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,156 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 76.5%)
+2025-06-26 21:00:23,156 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 89.9%)
+2025-06-26 21:00:23,156 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,156 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,156 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,156 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,156 - __main__ - INFO -    Reward: -6282.41
+2025-06-26 21:00:23,156 - __main__ - INFO - 📥 RL Processing: prediction_20250626_202730.csv
+2025-06-26 21:00:23,156 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,156 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 89.6%)
+2025-06-26 21:00:23,156 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 83.8%)
+2025-06-26 21:00:23,156 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,156 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,156 - __main__ - INFO -    Pb Flow: 0.175 mL/min
+2025-06-26 21:00:23,156 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,156 - __main__ - INFO -    Reward: -6270.96
+2025-06-26 21:00:23,157 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204336.csv
+2025-06-26 21:00:23,157 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,157 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 85.1%)
+2025-06-26 21:00:23,157 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 89.5%)
+2025-06-26 21:00:23,157 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,157 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,157 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,157 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,157 - __main__ - INFO -    Reward: -6270.33
+2025-06-26 21:00:23,157 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204406.csv
+2025-06-26 21:00:23,157 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,157 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 76.1%)
+2025-06-26 21:00:23,157 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 85.3%)
+2025-06-26 21:00:23,157 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,157 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,157 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,157 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,157 - __main__ - INFO -    Reward: -6265.90
+2025-06-26 21:00:23,158 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204519.csv
+2025-06-26 21:00:23,158 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,158 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 80.3%)
+2025-06-26 21:00:23,158 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 79.0%)
+2025-06-26 21:00:23,158 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,158 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,158 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,158 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,158 - __main__ - INFO -    Reward: -6273.41
+2025-06-26 21:00:23,158 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204520.csv
+2025-06-26 21:00:23,159 - __main__ - INFO - 🔮 CNN Prediction Complete (0.02s):
+2025-06-26 21:00:23,159 - __main__ - INFO -    PLQY: 0.931 (93.1%)
+2025-06-26 21:00:23,159 - __main__ - INFO -    Peak: 519.6 nm
+2025-06-26 21:00:23,159 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,159 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,159 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250624_203234.png
+2025-06-26 21:00:23,159 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,159 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 79.2%)
+2025-06-26 21:00:23,159 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 89.9%)
+2025-06-26 21:00:23,159 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,159 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,159 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,159 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,159 - __main__ - INFO -    Reward: -6270.96
+2025-06-26 21:00:23,159 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204546.csv
+2025-06-26 21:00:23,159 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,159 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 75.7%)
+2025-06-26 21:00:23,159 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 87.5%)
+2025-06-26 21:00:23,159 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,159 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,159 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,159 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,159 - __main__ - INFO -    Reward: -6271.36
+2025-06-26 21:00:23,160 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204700.csv
+2025-06-26 21:00:23,160 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,160 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 82.6%)
+2025-06-26 21:00:23,160 - __main__ - WARNING - 🔧 Digital Twin: Cs pump showing warning status
+2025-06-26 21:00:23,160 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 81.7%)
+2025-06-26 21:00:23,160 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,160 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,160 - __main__ - INFO -    Pb Flow: 0.212 mL/min
+2025-06-26 21:00:23,160 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,160 - __main__ - INFO -    Reward: -6271.52
+2025-06-26 21:00:23,160 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204818.csv
+2025-06-26 21:00:23,160 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,160 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 79.1%)
+2025-06-26 21:00:23,160 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 87.4%)
+2025-06-26 21:00:23,160 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,160 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,160 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,160 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,160 - __main__ - INFO -    Reward: -6270.49
+2025-06-26 21:00:23,160 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204848.csv
+2025-06-26 21:00:23,161 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,161 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 85.9%)
+2025-06-26 21:00:23,161 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 83.2%)
+2025-06-26 21:00:23,161 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,161 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,161 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,161 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,161 - __main__ - INFO -    Reward: -6265.90
+2025-06-26 21:00:23,161 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204918.csv
+2025-06-26 21:00:23,161 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,161 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 81.4%)
+2025-06-26 21:00:23,161 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 89.7%)
+2025-06-26 21:00:23,161 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,161 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,161 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,161 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,161 - __main__ - INFO -    Reward: -6275.97
+2025-06-26 21:00:23,161 - __main__ - INFO - 📥 RL Processing: prediction_20250626_204948.csv
+2025-06-26 21:00:23,161 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,161 - __main__ - INFO -    Reasoning: RL parameters safe but may produce Mixed Phase (confidence: 79.3%)
+2025-06-26 21:00:23,161 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 82.9%)
+2025-06-26 21:00:23,161 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,161 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,161 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,161 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,161 - __main__ - INFO -    Reward: -6273.41
+2025-06-26 21:00:23,162 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205415.csv
+2025-06-26 21:00:23,162 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,162 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 85.5%)
+2025-06-26 21:00:23,162 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 78.8%)
+2025-06-26 21:00:23,162 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,162 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,162 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,162 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,162 - __main__ - INFO -    Reward: -6283.52
+2025-06-26 21:00:23,162 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205416.csv
+2025-06-26 21:00:23,162 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,162 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 75.2%)
+2025-06-26 21:00:23,162 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 80.5%)
+2025-06-26 21:00:23,162 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,162 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,162 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,162 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,162 - __main__ - INFO -    Reward: -6270.96
+2025-06-26 21:00:23,163 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205442.csv
+2025-06-26 21:00:23,163 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,163 - __main__ - INFO -    Reasoning: RL parameters safe but may produce Mixed Phase (confidence: 71.5%)
+2025-06-26 21:00:23,163 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 86.9%)
+2025-06-26 21:00:23,163 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,163 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,163 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,163 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,163 - __main__ - INFO -    Reward: -6271.11
+2025-06-26 21:00:23,163 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205512.csv
+2025-06-26 21:00:23,163 - __main__ - INFO - 🔧 Digital Twin Validation: REJECT
+2025-06-26 21:00:23,163 - __main__ - INFO -    Reasoning: RL parameters rejected: Safety violations in predicted_not_failed
+2025-06-26 21:00:23,163 - __main__ - WARNING - ⚠️ RL action blocked by Digital Twin safety validation
+2025-06-26 21:00:23,163 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,163 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,164 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,164 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,164 - __main__ - INFO -    Reward: -6266.22
+2025-06-26 21:00:23,164 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205533.csv
+2025-06-26 21:00:23,164 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,164 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 75.9%)
+2025-06-26 21:00:23,164 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 87.8%)
+2025-06-26 21:00:23,164 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,164 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,164 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,164 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,164 - __main__ - INFO -    Reward: -6270.96
+2025-06-26 21:00:23,164 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205555.csv
+2025-06-26 21:00:23,164 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,164 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 82.2%)
+2025-06-26 21:00:23,164 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 78.9%)
+2025-06-26 21:00:23,164 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,164 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,164 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,164 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,164 - __main__ - INFO -    Reward: -6270.17
+2025-06-26 21:00:23,165 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205617.csv
+2025-06-26 21:00:23,165 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,165 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 82.1%)
+2025-06-26 21:00:23,165 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 77.8%)
+2025-06-26 21:00:23,165 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,165 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,165 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,165 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,165 - __main__ - INFO -    Reward: -6270.65
+2025-06-26 21:00:23,165 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205626.csv
+2025-06-26 21:00:23,165 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,165 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 77.0%)
+2025-06-26 21:00:23,165 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 77.0%)
+2025-06-26 21:00:23,165 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,165 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,165 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,165 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,165 - __main__ - INFO -    Reward: -6266.22
+2025-06-26 21:00:23,165 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205646.csv
+2025-06-26 21:00:23,165 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,165 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 82.5%)
+2025-06-26 21:00:23,165 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 83.2%)
+2025-06-26 21:00:23,165 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,165 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,165 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,165 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,165 - __main__ - INFO -    Reward: -6266.22
+2025-06-26 21:00:23,166 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205656.csv
+2025-06-26 21:00:23,166 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,166 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 86.6%)
+2025-06-26 21:00:23,166 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 75.7%)
+2025-06-26 21:00:23,166 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,166 - __main__ - INFO -    Cs Flow: 0.171 mL/min
+2025-06-26 21:00:23,166 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,166 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,166 - __main__ - INFO -    Reward: -6276.69
+2025-06-26 21:00:23,166 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205716.csv
+2025-06-26 21:00:23,166 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,166 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 84.0%)
+2025-06-26 21:00:23,166 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 81.6%)
+2025-06-26 21:00:23,166 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,166 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,166 - __main__ - INFO -    Pb Flow: 0.116 mL/min
+2025-06-26 21:00:23,166 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,166 - __main__ - INFO -    Reward: -6276.69
+2025-06-26 21:00:23,166 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205726.csv
+2025-06-26 21:00:23,166 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,166 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 80.8%)
+2025-06-26 21:00:23,166 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 85.9%)
+2025-06-26 21:00:23,166 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,166 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,166 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:23,166 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,166 - __main__ - INFO -    Reward: -6274.19
+2025-06-26 21:00:23,167 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205756.csv
+2025-06-26 21:00:23,167 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:23,167 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 76.2%)
+2025-06-26 21:00:23,167 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 77.7%)
+2025-06-26 21:00:23,167 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,167 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:23,167 - __main__ - INFO -    Pb Flow: 0.127 mL/min
+2025-06-26 21:00:23,167 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,167 - __main__ - INFO -    Reward: -6282.48
+2025-06-26 21:00:23,167 - __main__ - INFO - 📥 RL Processing: prediction_20250626_205826.csv
+2025-06-26 21:00:23,167 - __main__ - INFO - 🔧 Digital Twin Validation: REJECT
+2025-06-26 21:00:23,167 - __main__ - INFO -    Reasoning: RL parameters rejected: Safety violations in predicted_not_failed
+2025-06-26 21:00:23,167 - __main__ - WARNING - ⚠️ RL action blocked by Digital Twin safety validation
+2025-06-26 21:00:23,167 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:23,167 - __main__ - INFO -    Cs Flow: 0.350 mL/min
+2025-06-26 21:00:23,167 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:00:23,167 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:23,167 - __main__ - INFO -    Reward: -6270.54
+2025-06-26 21:00:23,173 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,173 - __main__ - INFO -    PLQY: 0.932 (93.2%)
+2025-06-26 21:00:23,173 - __main__ - INFO -    Peak: 519.6 nm
+2025-06-26 21:00:23,173 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,173 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,173 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_201230.png
+2025-06-26 21:00:23,187 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,187 - __main__ - INFO -    PLQY: 0.932 (93.2%)
+2025-06-26 21:00:23,187 - __main__ - INFO -    Peak: 519.6 nm
+2025-06-26 21:00:23,187 - __main__ - INFO -    FWHM: 24.4 nm
+2025-06-26 21:00:23,187 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,187 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_202213.png
+2025-06-26 21:00:23,201 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,201 - __main__ - INFO -    PLQY: 0.932 (93.2%)
+2025-06-26 21:00:23,201 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,201 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,201 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,201 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_202459.png
+2025-06-26 21:00:23,215 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,215 - __main__ - INFO -    PLQY: 0.933 (93.3%)
+2025-06-26 21:00:23,215 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,215 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,215 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,215 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_204336.png
+2025-06-26 21:00:23,228 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,228 - __main__ - INFO -    PLQY: 0.933 (93.3%)
+2025-06-26 21:00:23,228 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,228 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,228 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,228 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_204545.png
+2025-06-26 21:00:23,241 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,241 - __main__ - INFO -    PLQY: 0.932 (93.2%)
+2025-06-26 21:00:23,241 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,241 - __main__ - INFO -    FWHM: 24.4 nm
+2025-06-26 21:00:23,241 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,242 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_204659.png
+2025-06-26 21:00:23,255 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,255 - __main__ - INFO -    PLQY: 0.931 (93.1%)
+2025-06-26 21:00:23,255 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,255 - __main__ - INFO -    FWHM: 24.4 nm
+2025-06-26 21:00:23,255 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,255 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_204818.png
+2025-06-26 21:00:23,268 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,268 - __main__ - INFO -    PLQY: 0.932 (93.2%)
+2025-06-26 21:00:23,268 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,268 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,268 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,268 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_205441.png
+2025-06-26 21:00:23,282 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,282 - __main__ - INFO -    PLQY: 0.933 (93.3%)
+2025-06-26 21:00:23,282 - __main__ - INFO -    Peak: 519.6 nm
+2025-06-26 21:00:23,282 - __main__ - INFO -    FWHM: 24.4 nm
+2025-06-26 21:00:23,282 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,282 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_205555.png
+2025-06-26 21:00:23,295 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,295 - __main__ - INFO -    PLQY: 0.934 (93.4%)
+2025-06-26 21:00:23,295 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,295 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,295 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,295 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_205615.png
+2025-06-26 21:00:23,309 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,309 - __main__ - INFO -    PLQY: 0.931 (93.1%)
+2025-06-26 21:00:23,309 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,309 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,309 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,309 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250624_200833.png
+2025-06-26 21:00:23,322 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,322 - __main__ - INFO -    PLQY: 0.926 (92.6%)
+2025-06-26 21:00:23,322 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,322 - __main__ - INFO -    FWHM: 23.4 nm
+2025-06-26 21:00:23,322 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,322 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250624_203304.png
+2025-06-26 21:00:23,335 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,335 - __main__ - INFO -    PLQY: 0.927 (92.7%)
+2025-06-26 21:00:23,335 - __main__ - INFO -    Peak: 518.5 nm
+2025-06-26 21:00:23,335 - __main__ - INFO -    FWHM: 23.3 nm
+2025-06-26 21:00:23,335 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,335 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_201300.png
+2025-06-26 21:00:23,350 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,350 - __main__ - INFO -    PLQY: 0.927 (92.7%)
+2025-06-26 21:00:23,350 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,350 - __main__ - INFO -    FWHM: 23.4 nm
+2025-06-26 21:00:23,350 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,350 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_202243.png
+2025-06-26 21:00:23,363 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,363 - __main__ - INFO -    PLQY: 0.927 (92.7%)
+2025-06-26 21:00:23,363 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,363 - __main__ - INFO -    FWHM: 23.4 nm
+2025-06-26 21:00:23,363 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,363 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_202529.png
+2025-06-26 21:00:23,377 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,377 - __main__ - INFO -    PLQY: 0.928 (92.8%)
+2025-06-26 21:00:23,377 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,377 - __main__ - INFO -    FWHM: 23.3 nm
+2025-06-26 21:00:23,377 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,377 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_204406.png
+2025-06-26 21:00:23,390 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,390 - __main__ - INFO -    PLQY: 0.928 (92.8%)
+2025-06-26 21:00:23,390 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,390 - __main__ - INFO -    FWHM: 23.4 nm
+2025-06-26 21:00:23,390 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,391 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_204848.png
+2025-06-26 21:00:23,404 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,404 - __main__ - INFO -    PLQY: 0.928 (92.8%)
+2025-06-26 21:00:23,404 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,404 - __main__ - INFO -    FWHM: 23.4 nm
+2025-06-26 21:00:23,404 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,404 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_205511.png
+2025-06-26 21:00:23,418 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,418 - __main__ - INFO -    PLQY: 0.926 (92.6%)
+2025-06-26 21:00:23,418 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,418 - __main__ - INFO -    FWHM: 23.4 nm
+2025-06-26 21:00:23,418 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,418 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_205625.png
+2025-06-26 21:00:23,432 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,432 - __main__ - INFO -    PLQY: 0.926 (92.6%)
+2025-06-26 21:00:23,432 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,432 - __main__ - INFO -    FWHM: 23.4 nm
+2025-06-26 21:00:23,432 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,432 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_205645.png
+2025-06-26 21:00:23,446 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,446 - __main__ - INFO -    PLQY: 0.926 (92.6%)
+2025-06-26 21:00:23,446 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:00:23,446 - __main__ - INFO -    FWHM: 23.4 nm
+2025-06-26 21:00:23,446 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,446 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250624_200903.png
+2025-06-26 21:00:23,459 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,459 - __main__ - INFO -    PLQY: 0.938 (93.8%)
+2025-06-26 21:00:23,459 - __main__ - INFO -    Peak: 520.2 nm
+2025-06-26 21:00:23,459 - __main__ - INFO -    FWHM: 25.1 nm
+2025-06-26 21:00:23,459 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,460 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250624_203334.png
+2025-06-26 21:00:23,472 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,472 - __main__ - INFO -    PLQY: 0.937 (93.7%)
+2025-06-26 21:00:23,472 - __main__ - INFO -    Peak: 520.2 nm
+2025-06-26 21:00:23,472 - __main__ - INFO -    FWHM: 25.1 nm
+2025-06-26 21:00:23,472 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,472 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250626_201330.png
+2025-06-26 21:00:23,487 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,487 - __main__ - INFO -    PLQY: 0.939 (93.9%)
+2025-06-26 21:00:23,487 - __main__ - INFO -    Peak: 520.2 nm
+2025-06-26 21:00:23,487 - __main__ - INFO -    FWHM: 25.1 nm
+2025-06-26 21:00:23,487 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,487 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250626_202313.png
+2025-06-26 21:00:23,500 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,500 - __main__ - INFO -    PLQY: 0.939 (93.9%)
+2025-06-26 21:00:23,500 - __main__ - INFO -    Peak: 520.2 nm
+2025-06-26 21:00:23,500 - __main__ - INFO -    FWHM: 25.1 nm
+2025-06-26 21:00:23,501 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,501 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250626_202559.png
+2025-06-26 21:00:23,514 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,514 - __main__ - INFO -    PLQY: 0.939 (93.9%)
+2025-06-26 21:00:23,514 - __main__ - INFO -    Peak: 520.2 nm
+2025-06-26 21:00:23,514 - __main__ - INFO -    FWHM: 25.0 nm
+2025-06-26 21:00:23,514 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,514 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250626_204918.png
+2025-06-26 21:00:23,527 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,527 - __main__ - INFO -    PLQY: 0.937 (93.7%)
+2025-06-26 21:00:23,527 - __main__ - INFO -    Peak: 520.1 nm
+2025-06-26 21:00:23,527 - __main__ - INFO -    FWHM: 25.0 nm
+2025-06-26 21:00:23,527 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,528 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250626_205655.png
+2025-06-26 21:00:23,541 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,541 - __main__ - INFO -    PLQY: 0.939 (93.9%)
+2025-06-26 21:00:23,541 - __main__ - INFO -    Peak: 520.2 nm
+2025-06-26 21:00:23,541 - __main__ - INFO -    FWHM: 25.1 nm
+2025-06-26 21:00:23,541 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,541 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250626_205715.png
+2025-06-26 21:00:23,555 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,555 - __main__ - INFO -    PLQY: 0.939 (93.9%)
+2025-06-26 21:00:23,555 - __main__ - INFO -    Peak: 520.2 nm
+2025-06-26 21:00:23,555 - __main__ - INFO -    FWHM: 25.1 nm
+2025-06-26 21:00:23,555 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,555 - __main__ - INFO - 📸 Processing spectral image: spectrum_004_20250624_200933.png
+2025-06-26 21:00:23,569 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,569 - __main__ - INFO -    PLQY: 0.909 (90.9%)
+2025-06-26 21:00:23,569 - __main__ - INFO -    Peak: 518.9 nm
+2025-06-26 21:00:23,569 - __main__ - INFO -    FWHM: 24.1 nm
+2025-06-26 21:00:23,569 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,569 - __main__ - INFO - 📸 Processing spectral image: spectrum_004_20250624_203404.png
+2025-06-26 21:00:23,582 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,582 - __main__ - INFO -    PLQY: 0.912 (91.2%)
+2025-06-26 21:00:23,582 - __main__ - INFO -    Peak: 518.9 nm
+2025-06-26 21:00:23,582 - __main__ - INFO -    FWHM: 24.1 nm
+2025-06-26 21:00:23,582 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,582 - __main__ - INFO - 📸 Processing spectral image: spectrum_004_20250626_201400.png
+2025-06-26 21:00:23,597 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,597 - __main__ - INFO -    PLQY: 0.909 (90.9%)
+2025-06-26 21:00:23,597 - __main__ - INFO -    Peak: 518.9 nm
+2025-06-26 21:00:23,597 - __main__ - INFO -    FWHM: 24.1 nm
+2025-06-26 21:00:23,597 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,597 - __main__ - INFO - 📸 Processing spectral image: spectrum_004_20250626_202343.png
+2025-06-26 21:00:23,610 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,610 - __main__ - INFO -    PLQY: 0.907 (90.7%)
+2025-06-26 21:00:23,610 - __main__ - INFO -    Peak: 519.0 nm
+2025-06-26 21:00:23,610 - __main__ - INFO -    FWHM: 24.2 nm
+2025-06-26 21:00:23,610 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,610 - __main__ - INFO - 📸 Processing spectral image: spectrum_004_20250626_202629.png
+2025-06-26 21:00:23,623 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,623 - __main__ - INFO -    PLQY: 0.909 (90.9%)
+2025-06-26 21:00:23,623 - __main__ - INFO -    Peak: 518.9 nm
+2025-06-26 21:00:23,623 - __main__ - INFO -    FWHM: 24.1 nm
+2025-06-26 21:00:23,624 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,624 - __main__ - INFO - 📸 Processing spectral image: spectrum_004_20250626_204948.png
+2025-06-26 21:00:23,637 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,637 - __main__ - INFO -    PLQY: 0.909 (90.9%)
+2025-06-26 21:00:23,637 - __main__ - INFO -    Peak: 518.9 nm
+2025-06-26 21:00:23,637 - __main__ - INFO -    FWHM: 24.1 nm
+2025-06-26 21:00:23,637 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,637 - __main__ - INFO - 📸 Processing spectral image: spectrum_004_20250626_205725.png
+2025-06-26 21:00:23,650 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,650 - __main__ - INFO -    PLQY: 0.908 (90.8%)
+2025-06-26 21:00:23,650 - __main__ - INFO -    Peak: 519.0 nm
+2025-06-26 21:00:23,650 - __main__ - INFO -    FWHM: 24.2 nm
+2025-06-26 21:00:23,650 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,650 - __main__ - INFO - 📸 Processing spectral image: spectrum_005_20250624_201003.png
+2025-06-26 21:00:23,664 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,665 - __main__ - INFO -    PLQY: 0.931 (93.1%)
+2025-06-26 21:00:23,665 - __main__ - INFO -    Peak: 520.5 nm
+2025-06-26 21:00:23,665 - __main__ - INFO -    FWHM: 25.6 nm
+2025-06-26 21:00:23,665 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,665 - __main__ - INFO - 📸 Processing spectral image: spectrum_005_20250624_203434.png
+2025-06-26 21:00:23,677 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,678 - __main__ - INFO -    PLQY: 0.931 (93.1%)
+2025-06-26 21:00:23,678 - __main__ - INFO -    Peak: 520.4 nm
+2025-06-26 21:00:23,678 - __main__ - INFO -    FWHM: 25.5 nm
+2025-06-26 21:00:23,678 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,678 - __main__ - INFO - 📸 Processing spectral image: spectrum_005_20250626_201430.png
+2025-06-26 21:00:23,691 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,691 - __main__ - INFO -    PLQY: 0.930 (93.0%)
+2025-06-26 21:00:23,691 - __main__ - INFO -    Peak: 520.5 nm
+2025-06-26 21:00:23,691 - __main__ - INFO -    FWHM: 25.6 nm
+2025-06-26 21:00:23,691 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,691 - __main__ - INFO - 📸 Processing spectral image: spectrum_005_20250626_202413.png
+2025-06-26 21:00:23,705 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,705 - __main__ - INFO -    PLQY: 0.930 (93.0%)
+2025-06-26 21:00:23,705 - __main__ - INFO -    Peak: 520.4 nm
+2025-06-26 21:00:23,705 - __main__ - INFO -    FWHM: 25.5 nm
+2025-06-26 21:00:23,705 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,705 - __main__ - INFO - 📸 Processing spectral image: spectrum_005_20250626_202659.png
+2025-06-26 21:00:23,718 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,718 - __main__ - INFO -    PLQY: 0.931 (93.1%)
+2025-06-26 21:00:23,718 - __main__ - INFO -    Peak: 520.5 nm
+2025-06-26 21:00:23,718 - __main__ - INFO -    FWHM: 25.5 nm
+2025-06-26 21:00:23,718 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,718 - __main__ - INFO - 📸 Processing spectral image: spectrum_005_20250626_205755.png
+2025-06-26 21:00:23,733 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,733 - __main__ - INFO -    PLQY: 0.930 (93.0%)
+2025-06-26 21:00:23,733 - __main__ - INFO -    Peak: 520.4 nm
+2025-06-26 21:00:23,733 - __main__ - INFO -    FWHM: 25.5 nm
+2025-06-26 21:00:23,733 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,733 - __main__ - INFO - 📸 Processing spectral image: spectrum_006_20250624_201033.png
+2025-06-26 21:00:23,747 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,747 - __main__ - INFO -    PLQY: 0.926 (92.6%)
+2025-06-26 21:00:23,747 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,747 - __main__ - INFO -    FWHM: 24.4 nm
+2025-06-26 21:00:23,747 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,747 - __main__ - INFO - 📸 Processing spectral image: spectrum_006_20250624_203504.png
+2025-06-26 21:00:23,761 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,761 - __main__ - INFO -    PLQY: 0.929 (92.9%)
+2025-06-26 21:00:23,761 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,761 - __main__ - INFO -    FWHM: 24.4 nm
+2025-06-26 21:00:23,761 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,761 - __main__ - INFO - 📸 Processing spectral image: spectrum_006_20250626_201500.png
+2025-06-26 21:00:23,774 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,774 - __main__ - INFO -    PLQY: 0.929 (92.9%)
+2025-06-26 21:00:23,774 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,774 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,774 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,775 - __main__ - INFO - 📸 Processing spectral image: spectrum_006_20250626_202443.png
+2025-06-26 21:00:23,788 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,788 - __main__ - INFO -    PLQY: 0.929 (92.9%)
+2025-06-26 21:00:23,788 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,788 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,788 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,788 - __main__ - INFO - 📸 Processing spectral image: spectrum_006_20250626_202729.png
+2025-06-26 21:00:23,802 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,802 - __main__ - INFO -    PLQY: 0.929 (92.9%)
+2025-06-26 21:00:23,802 - __main__ - INFO -    Peak: 519.5 nm
+2025-06-26 21:00:23,802 - __main__ - INFO -    FWHM: 24.3 nm
+2025-06-26 21:00:23,802 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:23,802 - __main__ - INFO - 📸 Processing spectral image: spectrum_006_20250626_205825.png
+2025-06-26 21:00:23,815 - __main__ - INFO - 🔮 CNN Prediction Complete (0.01s):
+2025-06-26 21:00:23,815 - __main__ - INFO -    PLQY: 0.927 (92.7%)
+2025-06-26 21:00:23,815 - __main__ - INFO -    Peak: 519.4 nm
+2025-06-26 21:00:23,815 - __main__ - INFO -    FWHM: 24.2 nm
+2025-06-26 21:00:23,815 - __main__ - INFO - 💾 Saved: prediction_20250626_210023.csv
+2025-06-26 21:00:24,173 - __main__ - INFO - 📥 RL Processing: prediction_20250626_210023.csv
+2025-06-26 21:00:24,175 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:24,176 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 87.0%)
+2025-06-26 21:00:24,176 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 89.3%)
+2025-06-26 21:00:24,176 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:24,176 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:24,176 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:24,176 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:24,176 - __main__ - INFO -    Reward: -6270.54
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55895 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:00:46,605 - __main__ - INFO - ✅ Created 6 demo spectral images
+2025-06-26 21:00:46,605 - __main__ - INFO - 🚀 Demo started - releasing images every 30s
+INFO:     127.0.0.1:55907 - "POST /api/demo/start HTTP/1.1" 200 OK
+2025-06-26 21:00:46,606 - __main__ - INFO - 📸 Demo: Released spectrum_001_20250626_210046.png
+2025-06-26 21:00:47,870 - __main__ - INFO - 📸 Processing spectral image: spectrum_001_20250626_210046.png
+2025-06-26 21:00:47,889 - __main__ - INFO - 🔮 CNN Prediction Complete (0.02s):
+2025-06-26 21:00:47,889 - __main__ - INFO -    PLQY: 0.932 (93.2%)
+2025-06-26 21:00:47,889 - __main__ - INFO -    Peak: 519.6 nm
+2025-06-26 21:00:47,889 - __main__ - INFO -    FWHM: 24.4 nm
+2025-06-26 21:00:47,889 - __main__ - INFO - 💾 Saved: prediction_20250626_210047.csv
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:00:48,285 - __main__ - INFO - 📥 RL Processing: prediction_20250626_210047.csv
+2025-06-26 21:00:48,287 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:00:48,287 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 83.8%)
+2025-06-26 21:00:48,287 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 86.8%)
+2025-06-26 21:00:48,287 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:00:48,287 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:00:48,287 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:00:48,287 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:00:48,287 - __main__ - INFO -    Reward: -6271.27
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55914 - "GET /api/demo/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55922 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:01:16,613 - __main__ - INFO - 📸 Demo: Released spectrum_002_20250626_210116.png
+2025-06-26 21:01:17,963 - __main__ - INFO - 📸 Processing spectral image: spectrum_002_20250626_210116.png
+2025-06-26 21:01:17,992 - __main__ - INFO - 🔮 CNN Prediction Complete (0.03s):
+2025-06-26 21:01:17,992 - __main__ - INFO -    PLQY: 0.927 (92.7%)
+2025-06-26 21:01:17,992 - __main__ - INFO -    Peak: 518.6 nm
+2025-06-26 21:01:17,992 - __main__ - INFO -    FWHM: 23.3 nm
+2025-06-26 21:01:17,992 - __main__ - INFO - 💾 Saved: prediction_20250626_210117.csv
+INFO:     127.0.0.1:55936 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55889 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:01:18,429 - __main__ - INFO - 📥 RL Processing: prediction_20250626_210117.csv
+2025-06-26 21:01:18,431 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:01:18,432 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 89.6%)
+2025-06-26 21:01:18,432 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 78.4%)
+2025-06-26 21:01:18,432 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:01:18,432 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:01:18,432 - __main__ - INFO -    Pb Flow: 0.350 mL/min
+2025-06-26 21:01:18,432 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:01:18,432 - __main__ - INFO -    Reward: -6265.39
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55941 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55943 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:01:46,620 - __main__ - INFO - 📸 Demo: Released spectrum_003_20250626_210146.png
+2025-06-26 21:01:48,055 - __main__ - INFO - 📸 Processing spectral image: spectrum_003_20250626_210146.png
+2025-06-26 21:01:48,081 - __main__ - INFO - 🔮 CNN Prediction Complete (0.03s):
+2025-06-26 21:01:48,081 - __main__ - INFO -    PLQY: 0.938 (93.8%)
+2025-06-26 21:01:48,081 - __main__ - INFO -    Peak: 520.1 nm
+2025-06-26 21:01:48,081 - __main__ - INFO -    FWHM: 25.0 nm
+2025-06-26 21:01:48,081 - __main__ - INFO - 💾 Saved: prediction_20250626_210148.csv
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:01:48,577 - __main__ - INFO - 📥 RL Processing: prediction_20250626_210148.csv
+2025-06-26 21:01:48,579 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:01:48,579 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 0D Perovskite (confidence: 82.9%)
+2025-06-26 21:01:48,579 - __main__ - INFO - 🔧 Digital Twin updated: 2D Perovskite (confidence: 87.2%)
+2025-06-26 21:01:48,579 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:01:48,579 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:01:48,579 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:01:48,579 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:01:48,580 - __main__ - INFO -    Reward: -6275.81
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:02:16,624 - __main__ - INFO - 📸 Demo: Released spectrum_004_20250626_210216.png
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:02:18,146 - __main__ - INFO - 📸 Processing spectral image: spectrum_004_20250626_210216.png
+2025-06-26 21:02:18,175 - __main__ - INFO - 🔮 CNN Prediction Complete (0.03s):
+2025-06-26 21:02:18,175 - __main__ - INFO -    PLQY: 0.909 (90.9%)
+2025-06-26 21:02:18,175 - __main__ - INFO -    Peak: 518.9 nm
+2025-06-26 21:02:18,175 - __main__ - INFO -    FWHM: 24.1 nm
+2025-06-26 21:02:18,175 - __main__ - INFO - 💾 Saved: prediction_20250626_210218.csv
+2025-06-26 21:02:18,714 - __main__ - INFO - 📥 RL Processing: prediction_20250626_210218.csv
+2025-06-26 21:02:18,716 - __main__ - INFO - 🔧 Digital Twin Validation: APPROVE
+2025-06-26 21:02:18,716 - __main__ - INFO -    Reasoning: RL parameters safe but may produce 2D Perovskite (confidence: 76.9%)
+2025-06-26 21:02:18,716 - __main__ - INFO - 🔧 Digital Twin updated: 0D Perovskite (confidence: 83.0%)
+2025-06-26 21:02:18,716 - __main__ - INFO - 🤖 RL Decision Complete (0.00s):
+2025-06-26 21:02:18,716 - __main__ - INFO -    Cs Flow: 0.100 mL/min
+2025-06-26 21:02:18,716 - __main__ - INFO -    Pb Flow: 0.100 mL/min
+2025-06-26 21:02:18,716 - __main__ - INFO -    Temperature: 60.0 °C
+2025-06-26 21:02:18,717 - __main__ - INFO -    Reward: -6273.41
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55939 - "GET /api/status HTTP/1.1" 200 OK
+2025-06-26 21:02:46,631 - __main__ - INFO - 📸 Demo: Released spectrum_005_20250626_210246.png

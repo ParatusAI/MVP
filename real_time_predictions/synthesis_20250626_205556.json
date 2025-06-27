@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-26T20:55:56.380853",
+  "prediction_file": "prediction_20250626_205555.csv",
+  "source_image": "spectrum_001_20250626_205555.png",
+  "predictions": {
+    "predicted_plqy": 0.934,
+    "predicted_emission_peak": 519.5,
+    "predicted_fwhm": 24.3,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T20:55:55.866269",
+    "source_image": "spectrum_001_20250626_205555.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.3499999940395355,
+    "pb_flow_rate": 0.3499999940395355,
+    "temperature": 60.0,
+    "reward": -6270.1728515625,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T20:55:56.380256",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (519.5nm) well-centered at target (520.0nm) \u2022 FWHM (24.3nm) close to target (20.0nm) \u2022 Adjusting Cs flow (increase) to optimize Cs:Pb stoichiometry \u2022 Adjusting Pb flow (increase) for better nucleation control",
+    "previous_params": {
+      "cs_flow_rate": 0.10000000149011612,
+      "pb_flow_rate": 0.10000000149011612,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 0,
+      "predicted_outcome": "Mixed Phase",
+      "confidence": 0.6946084538218853,
+      "class_probabilities": {
+        "0": 0.43517420295233683,
+        "1": 0.04930046511465744,
+        "2": 0.2965124905276204,
+        "3": 0.06121201997238541,
+        "4": 0.15780082143299998
+      },
+      "conditions": {
+        "cs_br_concentration": 0.699999988079071,
+        "pb_br2_concentration": 0.629999989271164,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 1.1111110934744266,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.5263157944795271,
+        "supersaturation": 0.21421355066720987,
+        "nucleation_rate": 0.33435633569911294,
+        "growth_rate": 0.0,
+        "solvent_effect": 1.0356859558173501,
+        "cs_pb_temp_interaction": -0.37037036449147553,
+        "ligand_temp_interaction": -0.17543859815984236,
+        "concentration_product": 0.44099998497962967
+      },
+      "timestamp": "2025-06-26T20:55:56.380486"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.6946084538218853,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T20:55:56.380501",
+    "reasoning": "RL parameters safe but may produce Mixed Phase (confidence: 69.5%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.7615923653828113,
+    "class_probabilities": {
+      "0": 0.1269595612026712,
+      "1": 0.13874099150736927,
+      "2": 0.4426802885423855,
+      "3": 0.17934165485171064,
+      "4": 0.11227750389586338
+    },
+    "conditions": {
+      "cs_br_concentration": 0.27908747160089725,
+      "pb_br2_concentration": 0.4307773436558986,
+      "temperature": 68.77004141946638,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 0.6478694138221343,
+      "temp_normalized": -0.2602496548377802,
+      "ligand_ratio": 0.9861032341569715,
+      "supersaturation": 0.0594901405897259,
+      "nucleation_rate": 0.15762018939049222,
+      "growth_rate": 10.962551774332972,
+      "solvent_effect": 0.9648492343428814,
+      "cs_pb_temp_interaction": -0.1686077913271654,
+      "ligand_temp_interaction": -0.25663302632377055,
+      "concentration_product": 0.12022455966387556
+    },
+    "timestamp": "2025-06-26T20:55:56.380794"
+  },
+  "processing_time_seconds": 0.002228260040283203
+}

@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-26T20:27:00.859025",
+  "prediction_file": "prediction_20250626_202700.csv",
+  "source_image": "spectrum_005_20250626_202659.png",
+  "predictions": {
+    "predicted_plqy": 0.931,
+    "predicted_emission_peak": 520.5,
+    "predicted_fwhm": 25.5,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T20:27:00.692759",
+    "source_image": "spectrum_005_20250626_202659.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.10000000149011612,
+    "pb_flow_rate": 0.3499999940395355,
+    "temperature": 60.0,
+    "reward": -6282.40673828125,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T20:27:00.858261",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (520.5nm) well-centered at target (520.0nm) \u2022 FWHM (25.5nm) broader than target (20.0nm) - emission too wide \u2022 Adjusting Cs flow (decrease) to optimize Cs:Pb stoichiometry",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.3499999940395355,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 1,
+      "predicted_outcome": "0D Perovskite",
+      "confidence": 0.756439751475046,
+      "class_probabilities": {
+        "0": 0.23833910859967994,
+        "1": 0.45571040270161856,
+        "2": 0.05466890239049189,
+        "3": 0.16672982365983288,
+        "4": 0.08455176264837665
+      },
+      "conditions": {
+        "cs_br_concentration": 0.20000000298023224,
+        "pb_br2_concentration": 0.629999989271164,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 0.31746032255810913,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.8433734916882314,
+        "supersaturation": 0.06120387357350734,
+        "nucleation_rate": 0.2976142981107705,
+        "growth_rate": 0.0,
+        "solvent_effect": 0.9948939285939834,
+        "cs_pb_temp_interaction": -0.10582010751936971,
+        "ligand_temp_interaction": -0.28112449722941046,
+        "concentration_product": 0.12599999973177908
+      },
+      "timestamp": "2025-06-26T20:27:00.858557"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.756439751475046,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T20:27:00.858575",
+    "reasoning": "RL parameters safe but may produce 0D Perovskite (confidence: 75.6%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.7546083403947176,
+    "class_probabilities": {
+      "0": 0.008109901128142813,
+      "1": 0.016508291807476747,
+      "2": 0.4306195406178133,
+      "3": 0.31914599780995195,
+      "4": 0.22561626863661524
+    },
+    "conditions": {
+      "cs_br_concentration": 0.4387192581455332,
+      "pb_br2_concentration": 0.3701157234302981,
+      "temperature": 82.94338178112494,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 1.185356953295137,
+      "temp_normalized": -0.14213848515729216,
+      "ligand_ratio": 0.8654422809233424,
+      "supersaturation": 0.08262996322917286,
+      "nucleation_rate": 0.1600148393927448,
+      "growth_rate": 28.679227226406176,
+      "solvent_effect": 0.9969656629701984,
+      "cs_pb_temp_interaction": -0.16848484171203387,
+      "ligand_temp_interaction": -0.12301265480151558,
+      "concentration_product": 0.16237689561133772
+    },
+    "timestamp": "2025-06-26T20:27:00.858938"
+  },
+  "processing_time_seconds": 0.002540111541748047
+}

@@ -1,0 +1,55 @@
+
+CsPbBr3 Synthesis Dataset - Data Dictionary
+==========================================
+
+INPUT FEATURES (X variables):
+-----------------------------
+X1_cs_flow_rate:    Cesium precursor flow rate (mL/min)
+                    Range: 0.5 - 2.2 mL/min
+                    Physical meaning: Controls Cs:Pb stoichiometry
+
+X2_pb_flow_rate:    Lead precursor flow rate (mL/min)  
+                    Range: 0.6 - 1.8 mL/min
+                    Physical meaning: Controls Pb availability
+
+X3_temperature:     Reaction temperature (°C)
+                    Range: 100 - 200°C
+                    Physical meaning: Controls nucleation/growth kinetics
+
+X4_residence_time:  Reaction residence time (seconds)
+                    Range: 60 - 250 seconds
+                    Physical meaning: Time for crystal formation
+
+OUTPUT TARGETS (Y variables):
+----------------------------
+Y1_plqy:           Photoluminescence Quantum Yield (fraction)
+                   Range: 0.15 - 0.92
+                   Target: Maximize (>0.80 excellent, >0.60 good)
+
+Y2_emission_peak:  Emission wavelength peak (nm)
+                   Range: 505 - 530 nm
+                   Target: ~515-520 nm for green emission
+
+Y3_fwhm:          Full Width Half Maximum (nm)
+                   Range: 12 - 60 nm
+                   Target: Minimize (<25 nm for narrow emission)
+
+Y4_quality_class_encoded: Overall quality classification
+                         0 = poor (PLQY < 0.40)
+                         1 = fair (PLQY 0.40-0.60)  
+                         2 = good (PLQY 0.60-0.75)
+                         3 = excellent (PLQY > 0.75)
+
+SYNTHESIS RELATIONSHIPS:
+-----------------------
+- Higher Cs:Pb ratio (X1/X2) generally improves PLQY up to ~1.2
+- Temperature window 130-170°C optimal for high PLQY
+- Residence time 80-180s typically optimal (temperature dependent)
+- Total flow rate affects mixing and residence time distribution
+
+COMMERCIAL TARGETS:
+------------------
+- PLQY > 80% (Y1 > 0.80)
+- Green emission 515-520nm (Y2 = 515-520)  
+- Narrow linewidth FWHM < 25nm (Y3 < 25)
+- Consistent quality class 2-3 (Y4 ≥ 2)

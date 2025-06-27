@@ -1,0 +1,78 @@
+{
+  "timestamp": "2025-06-26T20:48:49.633898",
+  "prediction_file": "prediction_20250626_204848.csv",
+  "source_image": "spectrum_002_20250626_204848.png",
+  "predictions": {
+    "predicted_plqy": 0.928,
+    "predicted_emission_peak": 518.6,
+    "predicted_fwhm": 23.4,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T20:48:48.690643",
+    "source_image": "spectrum_002_20250626_204848.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.3499999940395355,
+    "pb_flow_rate": 0.3131534457206726,
+    "temperature": 60.0,
+    "reward": -6265.90087890625,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T20:48:49.633429",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (518.6nm) well-centered at target (520.0nm) \u2022 FWHM (23.4nm) close to target (20.0nm) \u2022 Adjusting Pb flow (increase) for better nucleation control",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.10000000149011612,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": false,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": false
+    },
+    "predicted_outcome": {
+      "predicted_class": 4,
+      "predicted_outcome": "Failed Synthesis",
+      "confidence": 0.7441867295061017,
+      "class_probabilities": {
+        "0": 0.22998809350172195,
+        "1": 0.17225636657326082,
+        "2": 0.03935740302284768,
+        "3": 0.13032312588201606,
+        "4": 0.42807501102015355
+      },
+      "conditions": {
+        "cs_br_concentration": 0.699999988079071,
+        "pb_br2_concentration": 0.5636762022972107,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 1.2418476650385604,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.5539393713291132,
+        "supersaturation": 0.19166203615397548,
+        "nucleation_rate": 0.12397057296050004,
+        "growth_rate": 0.0,
+        "solvent_effect": 1.0295775702271877,
+        "cs_pb_temp_interaction": -0.4139492216795201,
+        "ligand_temp_interaction": -0.1846464571097044,
+        "concentration_product": 0.39457333488850355
+      },
+      "timestamp": "2025-06-26T20:48:49.633613"
+    },
+    "recommendation": "reject",
+    "confidence_score": 0.7441867295061017,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T20:48:49.633628",
+    "reasoning": "RL parameters rejected: Safety violations in predicted_not_failed"
+  },
+  "digital_twin_prediction": null,
+  "processing_time_seconds": 0.001703023910522461
+}

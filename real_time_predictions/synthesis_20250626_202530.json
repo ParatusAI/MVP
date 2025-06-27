@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-06-26T20:25:30.458276",
+  "prediction_file": "prediction_20250626_202530.csv",
+  "source_image": "spectrum_002_20250626_202529.png",
+  "predictions": {
+    "predicted_plqy": 0.928,
+    "predicted_emission_peak": 518.6,
+    "predicted_fwhm": 23.3,
+    "confidence": 0.944,
+    "model_version": "spectral_cnn_v3",
+    "timestamp": "2025-06-26T20:25:30.399891",
+    "source_image": "spectrum_002_20250626_202529.png"
+  },
+  "rl_action": {
+    "cs_flow_rate": 0.10000000149011612,
+    "pb_flow_rate": 0.3499999940395355,
+    "temperature": 60.0,
+    "reward": -6265.23095703125,
+    "action_type": "ppo_optimized",
+    "timestamp": "2025-06-26T20:25:30.457968",
+    "reasoning": "PLQY (0.9%) below target (80.0%) - need to improve quantum yield \u2022 Emission peak (518.6nm) well-centered at target (520.0nm) \u2022 FWHM (23.3nm) close to target (20.0nm) \u2022 Adjusting Cs flow (decrease) to optimize Cs:Pb stoichiometry \u2022 Adjusting Pb flow (increase) for better nucleation control",
+    "previous_params": {
+      "cs_flow_rate": 0.3499999940395355,
+      "pb_flow_rate": 0.10000000149011612,
+      "temperature": 60.0
+    }
+  },
+  "digital_twin_validation": {
+    "is_safe": true,
+    "safety_checks": {
+      "temperature_safe": true,
+      "concentration_safe": true,
+      "ratio_reasonable": true,
+      "predicted_not_failed": true
+    },
+    "predicted_outcome": {
+      "predicted_class": 2,
+      "predicted_outcome": "2D Perovskite",
+      "confidence": 0.8355491367999913,
+      "class_probabilities": {
+        "0": 0.07486395154162491,
+        "1": 0.0990641650433269,
+        "2": 0.46223196202750144,
+        "3": 0.3019536079384805,
+        "4": 0.061886313449066324
+      },
+      "conditions": {
+        "cs_br_concentration": 0.20000000298023224,
+        "pb_br2_concentration": 0.629999989271164,
+        "temperature": 60.0,
+        "oa_concentration": 0.4,
+        "oam_concentration": 0.3,
+        "reaction_time": 30.0,
+        "solvent_type": 1
+      },
+      "derived_features": {
+        "cs_pb_ratio": 0.31746032255810913,
+        "temp_normalized": -0.3333333333333333,
+        "ligand_ratio": 0.8433734916882314,
+        "supersaturation": 0.06120387357350734,
+        "nucleation_rate": 0.2792176190858381,
+        "growth_rate": 0.0,
+        "solvent_effect": 0.965300270297327,
+        "cs_pb_temp_interaction": -0.10582010751936971,
+        "ligand_temp_interaction": -0.28112449722941046,
+        "concentration_product": 0.12599999973177908
+      },
+      "timestamp": "2025-06-26T20:25:30.458072"
+    },
+    "recommendation": "approve",
+    "confidence_score": 0.8355491367999913,
+    "expected_improvement": false,
+    "validation_timestamp": "2025-06-26T20:25:30.458079",
+    "reasoning": "RL parameters safe but may produce 2D Perovskite (confidence: 83.6%)"
+  },
+  "digital_twin_prediction": {
+    "predicted_class": 2,
+    "predicted_outcome": "2D Perovskite",
+    "confidence": 0.7610560546813431,
+    "class_probabilities": {
+      "0": 0.17199608788153067,
+      "1": 0.022573528747453848,
+      "2": 0.5109353677512084,
+      "3": 0.021713236688620727,
+      "4": 0.27278177893118627
+    },
+    "conditions": {
+      "cs_br_concentration": 0.43776390578115804,
+      "pb_br2_concentration": 0.25444168698254743,
+      "temperature": 86.70455990340552,
+      "oa_concentration": 0.4,
+      "oam_concentration": 0.3,
+      "reaction_time": 30.0,
+      "solvent_type": 1
+    },
+    "derived_features": {
+      "cs_pb_ratio": 1.7204880763359514,
+      "temp_normalized": -0.1107953341382873,
+      "ligand_ratio": 1.0112602342500183,
+      "supersaturation": 0.057083159388763946,
+      "nucleation_rate": 0.3355540015393339,
+      "growth_rate": 33.38069987925691,
+      "solvent_effect": 1.0268966096966543,
+      "cs_pb_temp_interaction": -0.19062205129858087,
+      "ligand_temp_interaction": -0.11204291555449346,
+      "concentration_product": 0.1113853866870268
+    },
+    "timestamp": "2025-06-26T20:25:30.458234"
+  },
+  "processing_time_seconds": 0.0009107589721679688
+}

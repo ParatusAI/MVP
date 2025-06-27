@@ -1,0 +1,28 @@
+# Integrated MVP Requirements
+# CsPbBr3 Synthesis Optimization with ML + RL
+
+# Core ML/DL
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.21.0
+Pillow>=9.0.0
+
+# Reinforcement Learning
+stable-baselines3>=2.0.0
+gymnasium>=0.28.0
+
+# Web Interface
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+jinja2>=3.1.0
+
+# Data Processing
+pandas>=1.5.0
+scikit-learn>=1.2.0
+
+# Utilities
+python-multipart>=0.0.6
+aiofiles>=23.0.0
+
+# Optional (if available)
+# cuda-toolkit  # For GPU acceleration
